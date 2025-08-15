@@ -1,0 +1,36 @@
+{
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
+    },
+    "jk": {
+      // Use lua to execute any logic
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')"
+        ]
+      ]
+    }
+  },
+  "vscode-neovim.ctrlKeysForInsertMode": [
+    "a",
+    "c",
+    "d",
+    "h",
+    "j",
+    "m",
+    "o",
+    "r",
+    "t",
+    "u",
+    "w",
+    "k",
+    "l"
+  ]
+}

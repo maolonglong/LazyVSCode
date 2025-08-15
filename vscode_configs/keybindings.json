@@ -1,0 +1,24 @@
+[
+  {
+    "key": "ctrl+u",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "vscode-neovim.send", "args": "<C-u>" },
+        { "command": "editorScroll", "args": { "to": "up", "by": "halfPage" } }
+      ]
+    },
+    "when": "editorTextFocus && neovim.mode != insert"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "vscode-neovim.send", "args": "<C-d>" },
+        { "command": "editorScroll", "args": { "to": "down", "by": "halfPage" } }
+      ]
+    },
+    "when": "editorTextFocus && neovim.mode != insert"
+  }
+]
