@@ -13,6 +13,8 @@ map("i", "<C-j>", "<Down>", { desc = "Move down" })
 map("i", "<C-k>", "<Up>", { desc = "Move up" })
 map("i", "<C-l>", "<Right>", { desc = "Move right" })
 
+vim.keymap.set("x", "p", '"_dP', { desc = "Paste (keep register)", remap = false })
+
 vim.keymap.del({ "n", "x" }, "j")
 vim.keymap.del({ "n", "x" }, "k")
 
