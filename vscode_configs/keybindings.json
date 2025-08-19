@@ -20,5 +20,10 @@
       ]
     },
     "when": "editorTextFocus && neovim.mode != insert"
+  },
+  {
+    "key": "tab",
+    "command": "-vscode-neovim.send",
+    "when": "neovim.init && neovim.recording || editorTextFocus && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
   }
 ]
